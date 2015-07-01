@@ -1,0 +1,17 @@
+<employee id="2">
+
+	<id>test</id>
+
+	<firstname>John</firstname>
+
+	<lastname>May</lastname>
+
+	<email>john@example.org</email>
+
+	<department>Logistics</department>
+
+	<salary>400</salary>
+
+	<address>123 Stanley St.</address>
+
+</employee>

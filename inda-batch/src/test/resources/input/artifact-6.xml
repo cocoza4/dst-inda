@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<artifact>
+	<actualEffort>0</actualEffort>
+	<assignedTo>dt85330</assignedTo>
+	<autosumming>false</autosumming>
+	<category>new portal</category>
+	<closeDate>2015-06-03T03:52:00.988Z</closeDate>
+	<createdBy>dt70803</createdBy>
+	<createdDate>2015-03-31T10:54:31.000Z</createdDate>
+	<customer />
+	<description>A custom file for search form is not loaded when opening
+		the search form.
+
+		In New Portal, it only works correctly when opening an object.
+		In Classic Portal, it works correctly both search and work form.
+	</description>
+	<estimatedEffort>0</estimatedEffort>
+	<flexFields href="#id1" />
+	<folderId>tracker1021</folderId>
+	<group />
+	<id>artf60126</id>
+	<lastModifiedBy>dt85330</lastModifiedBy>
+	<lastModifiedDate>2015-06-03T03:52:01.000Z</lastModifiedDate>
+	<path>projects.jumpstart_awd/tracker.defect1/artf60120</path>
+	<planningFolderId>plan1557</planningFolderId>
+	<points>0</points>
+	<priority>2</priority>
+	<remainingEffort>0</remainingEffort>
+	<reportedReleaseId>rel1704</reportedReleaseId>
+	<resolvedReleaseId>rel1705</resolvedReleaseId>
+	<status>Closed</status>
+	<statusClass>Close</statusClass>
+	<title>Custom files not working on search form in New portal - BPSD-4337</title>
+	<version>116</version>
+	<ImpactAnalysis>Open Search form in New portal</ImpactAnalysis>
+	<Origin />
+	<QAPassed>Yes</QAPassed>
+	<ReportedDate>2015-03-31T05:00:00.000Z</ReportedDate>
+	<ReasonforCodeChange>Coding</ReasonforCodeChange>
+	<SymptomSubSystem />
+	<PublishDescription />
+	<TestSetName />
+	<Team>G Team (BKK)</Team>
+	<JEEContainer>All</JEEContainer>
+	<TechPubsReview />
+	<PTFNumber />
+	<CodeReview>2015-04-23T05:00:00.000Z</CodeReview>
+	<PublishTitle />
+	<ManualTestScripts>Form Designer - Custom JS and CSS.docx
+	</ManualTestScripts>
+	<ServerPlatform>All</ServerPlatform>
+	<TechDebt>Y</TechDebt>
+	<IncidentResolution>Append the custom js and css elements to form html
+		and pass to awd.searchForm
+	</IncidentResolution>
+	<TestingEffort>1</TestingEffort>
+	<UserStoryID />
+	<Browser>IE 9</Browser>
+	<Browser>IE 10</Browser>
+	<Browser>Chrome</Browser>
+	<Triage>The custom js/css file are not loaded correctly on search form
+		in New Portal. In awd.form, the expected ‘link’ or ‘script’ element
+		is not passed into _handleElem function but ‘h2’, so the custom file
+		cannot be appended to the head tag.
+	</Triage>
+	<BAReview />
+	<ReferenceTicketAddlDescription />
+	<RootCause>Base Code Changes</RootCause>
+	<ReportedBy />
+	<DocUpdate />
+	<StepstoReproduce>1. Configure the customJS.xml
+		2. Add Custom JS and CSS to a search form in Form Designer.
+		2. Log on to New portal
+		3. Open the search form that has just added the custom files.
+		4. The custom JS or CSS cannot be loaded
+
+		The custom files should be load correctly. If you use the attached files
+		in comment, the popup msg should be alerted when opening the search
+		form.
+
+		For step details, please read the manual script.
+
+	</StepstoReproduce>
+	<AutoTestScripts>Qunit - searchContainerUnitTest.js
+		Qunit - searchFormWidgetIntegrationTest.js
+		Qunit - searchFormStandaloneWidgetIntegrationTest.js
+		Qunit - searchFormWidgetUnitTest.js
+		Qunit - searchFormWidgetMock.js
+		Qunit - searchListIntegrationTest.js
+		Qunit - searchListUnitTest.js
+		Qunit - searchListWidgetMock.js
+		Qunit - searchResultContainerIntegrationTest.js
+		Qunit - searchResultContainerUnitTest.js
+		Qunit - searchUnitTest.js
+		Qunit - searchInputUnitTest.js
+		Qunit - searchIntegrationTest.js
+		Qunit - searchWidgetIntegrationMock.js
+		Qunit - searchWidgetIntegrationTest.js
+	</AutoTestScripts>
+	<ServerDatabase>All</ServerDatabase>
+	<comments>
+		<comment>
+			<createdBy>dt70527</createdBy>
+			<createdByFullname>Nattachai Werasiriwatn</createdByFullname>
+			<dateCreated>2015-04-24T07:12:09.000Z</dateCreated>
+			<description>code review. no issue.</description>
+			<id />
+			<transactionId>trxn4919a3d9ee3205e421635299</transactionId>
+		</comment>
+		<comment>
+			<createdBy>dt85330</createdBy>
+			<createdByFullname>Renuka Pemmasani</createdByFullname>
+			<dateCreated>2015-06-03T03:51:32.000Z</dateCreated>
+			<description>QA Passed and validated auto tests.</description>
+			<id />
+			<transactionId>trxn6a4ce0f65554538b0e136459</transactionId>
+		</comment>
+		<comment>
+			<createdBy>dt85330</createdBy>
+			<createdByFullname>Renuka Pemmasani</createdByFullname>
+			<dateCreated>2015-06-03T03:52:01.000Z</dateCreated>
+			<description>Testing passed.</description>
+			<id />
+			<transactionId>trxn082f13b475bd1e627e136fcf</transactionId>
+		</comment>
+		<comment>
+			<createdBy>dt66038</createdBy>
+			<createdByFullname>Thanitnan Luangtham</createdByFullname>
+			<dateCreated>2015-04-22T04:31:58.000Z</dateCreated>
+			<description>Assign to team</description>
+			<id />
+			<transactionId>trxn88760678aa66c9e480d51451</transactionId>
+		</comment>
+		<comment>
+			<createdBy>dt74681</createdBy>
+			<createdByFullname>Panthipa Suthamsmai</createdByFullname>
+			<dateCreated>2015-05-06T10:31:13.000Z</dateCreated>
+			<description>Ready for testing in AWD SP8 Build 1</description>
+			<id />
+			<transactionId>trxn5abb1406c3f2944554703462</transactionId>
+		</comment>
+		<comment>
+			<createdBy>dt208039</createdBy>
+			<createdByFullname>Tracy Pratt</createdByFullname>
+			<dateCreated>2015-05-20T20:41:16.000Z</dateCreated>
+			<description>Ready to validate in Weblogic environment</description>
+			<id />
+			<transactionId>trxn8b898d7dca580fafa9148237</transactionId>
+		</comment>
+	</comments>
+	<attachments>
+		<attachment>
+			<attachmentId>atch31002</attachmentId>
+			<createdBy>dt70803</createdBy>
+			<createdByFullname>Supaporn Sorakunpipitkun</createdByFullname>
+			<dateCreated>2015-03-31T10:54:31.000Z</dateCreated>
+			<fileName>customJS.xml</fileName>
+			<fileSize>170</fileSize>
+			<mimetype>application/xml</mimetype>
+			<rawFileId>kofr785b826d1490051562562036</rawFileId>
+			<storedFileId>file42047</storedFileId>
+			<transactionId>trxn3a7bdcf31de607112256203c</transactionId>
+		</attachment>
+		<attachment>
+			<attachmentId>atch31001</attachmentId>
+			<createdBy>dt70803</createdBy>
+			<createdByFullname>Supaporn Sorakunpipitkun</createdByFullname>
+			<dateCreated>2015-03-31T10:54:31.000Z</dateCreated>
+			<fileName>customTest.css</fileName>
+			<fileSize>500</fileSize>
+			<mimetype>text/css</mimetype>
+			<rawFileId>uoch4a40051bea55766612562033</rawFileId>
+			<storedFileId>file42046</storedFileId>
+			<transactionId>trxn3a7bdcf31de607112256203c</transactionId>
+		</attachment>
+		<attachment>
+			<attachmentId>atch31003</attachmentId>
+			<createdBy>dt70803</createdBy>
+			<createdByFullname>Supaporn Sorakunpipitkun</createdByFullname>
+			<dateCreated>2015-03-31T10:54:31.000Z</dateCreated>
+			<fileName>customTest.js</fileName>
+			<fileSize>760</fileSize>
+			<mimetype>application/javascript</mimetype>
+			<rawFileId>jaac092315c4e2460e3c22562039</rawFileId>
+			<storedFileId>file42048</storedFileId>
+			<transactionId>trxn3a7bdcf31de607112256203c</transactionId>
+		</attachment>
+	</attachments>
+	<associations>
+		<association>
+			<createdBy>dt70803</createdBy>
+			<creatorFullName>Supaporn Sorakunpipitkun</creatorFullName>
+			<dateCreated>2015-04-22T04:05:27.000Z</dateCreated>
+			<dateLastModified>2015-04-22T04:05:27.000Z</dateLastModified>
+			<description>[artf60120]: fix unable to load custom files on Search
+				form
+			</description>
+			<originId>artf60120</originId>
+			<originTitle>Custom files not working on search form in New portal -
+				BPSD-4337
+			</originTitle>
+			<originVersion>0</originVersion>
+			<targetId>cmmt110524</targetId>
+			<commits>
+				<commit>
+					<commitMessage>[artf60120]: fix unable to load custom files on
+						Search form
+					</commitMessage>
+					<filename>AWD/trunk/src/web/awd/common/widgets/awd.search/awd.search.js
+					</filename>
+					<id>scmf700823</id>
+					<refFilename />
+					<status>Modified</status>
+					<version>349555</version>
+				</commit>
+				<commit>
+					<commitMessage>[artf60120]: fix unable to load custom files on
+						Search form
+					</commitMessage>
+					<filename>AWD/trunk/src/web/awd/common/widgets/awd.search/awd.searchForm.js
+					</filename>
+					<id>scmf721662</id>
+					<refFilename />
+					<status>Modified</status>
+					<version>349555</version>
+				</commit>
+				<commit>
+					<commitMessage>[artf60120]: fix unable to load custom files on
+						Search form
+					</commitMessage>
+					<filename>AWD/trunk/src/web/awd/qUnitTests/widgets/js/searchUnitTest.js
+					</filename>
+					<id>scmf700824</id>
+					<refFilename />
+					<status>Modified</status>
+					<version>349555</version>
+				</commit>
+			</commits>
+			<targetTitle>Commit by Supaporn Sorakunpipitkun (dt70803)
+			</targetTitle>
+			<targetVersion>0</targetVersion>
+		</association>
+	</associations>
+</artifact>
