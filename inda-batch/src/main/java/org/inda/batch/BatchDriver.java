@@ -18,6 +18,7 @@ public class BatchDriver extends Configured implements Tool {
 	
 	@Override
 	public int run(String[] args) throws Exception {
+		
 		if (args.length != 2) {
 			System.err.printf("Usage: %s [generic options] <input> <output>\n", 
 					getClass().getSimpleName());
@@ -49,7 +50,6 @@ public class BatchDriver extends Configured implements Tool {
 		
 		job.setInputFormatClass(XMLInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
-
 		
 		return job.waitForCompletion(true) ? 0 : 1;
 	}
