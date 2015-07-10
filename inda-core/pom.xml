@@ -8,40 +8,34 @@
 		<artifactId>dst-inda</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>inda-batch</artifactId>
-	<name>inda-batch</name>
+	<artifactId>inda-core</artifactId>
+	<name>inda-core</name>
 	<url>http://maven.apache.org</url>
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<apache.commons.io.version>2.4</apache.commons.io.version>
+		<apache.commons.land>3.4</apache.commons.land>
 	</properties>
 	<dependencies>
 
-		<!-- <dependency>
-			<artifactId>core</artifactId>
-			<groupId>com.porpermpol.ppproperty</groupId>
-			<version>${project.version}</version>
-		</dependency> -->
-
 		<dependency>
-			<artifactId>inda-core</artifactId>
-			<groupId>org.dst.inda</groupId>
-			<version>${project.version}</version>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${apache.commons.io.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.hadoop</groupId>
-			<artifactId>hadoop-client</artifactId>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${apache.commons.land}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.mrunit</groupId>
-			<artifactId>mrunit</artifactId>
-			<classifier>hadoop2</classifier>
-		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
+
 	</dependencies>
 </project>
