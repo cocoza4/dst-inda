@@ -1,4 +1,4 @@
-package org.inda.storage;
+package org.dst.inda.application;
 
 /**
  * Hello world!

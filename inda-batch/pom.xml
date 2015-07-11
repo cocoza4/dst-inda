@@ -16,12 +16,6 @@
 	</properties>
 	<dependencies>
 
-		<!-- <dependency>
-			<artifactId>core</artifactId>
-			<groupId>com.porpermpol.ppproperty</groupId>
-			<version>${project.version}</version>
-		</dependency> -->
-
 		<dependency>
 			<artifactId>inda-core</artifactId>
 			<groupId>org.dst.inda</groupId>

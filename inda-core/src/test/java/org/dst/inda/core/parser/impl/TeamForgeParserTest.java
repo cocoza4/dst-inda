@@ -23,10 +23,10 @@ public class TeamForgeParserTest {
 	public static void beforeClass() throws Exception {
 
 		Parser parser = new TeamForgeParser();
-
+		
 		File file = new File("src/test/resources/artifact.xml");
-
 		String doc = FileUtils.readFileToString(file);
+		
 		artf = parser.parse(doc);
 	}
 
