@@ -22,6 +22,7 @@ public class Artifact {
 	private List<Comment> comments;
 	private List<Attachment> attachments;
 	private List<Association> associations;
+	private List<String> commitFiles;
 	
 	public String getId() {
 		return id;
@@ -157,6 +158,14 @@ public class Artifact {
 
 	public void setAssociations(List<Association> associations) {
 		this.associations = associations;
+	}
+
+	public List<String> getCommitFiles() {
+		return commitFiles;
+	}
+
+	public void setCommitFiles(List<String> files) {
+		this.commitFiles = files;
 	}
 
 }

@@ -28,6 +28,7 @@ public class SaxHandler extends DefaultHandler {
 		artf = new Artifact();
 		artf.setComments(new ArrayList<Comment>());
 		artf.setAssociations(new ArrayList<Association>());
+		artf.setCommitFiles(new ArrayList<String>());
 	}
 
 	private String currentParentElem() {
@@ -105,6 +106,10 @@ public class SaxHandler extends DefaultHandler {
 					association.setArtfTitle(value);
 				} else if (current.equalsIgnoreCase("description")) {
 					association.setDescription(value);
+				}
+			} else if (currentParent.equalsIgnoreCase("commit")) {
+				if (current.equalsIgnoreCase("filename")) {
+					artf.getCommitFiles().add(value);
 				}
 			}
 		}

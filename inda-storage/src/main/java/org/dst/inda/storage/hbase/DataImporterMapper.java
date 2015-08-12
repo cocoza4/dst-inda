@@ -18,11 +18,11 @@ import org.xml.sax.SAXException;
 public class DataImporterMapper<K> extends Mapper<LongWritable, Text, K, Put> {
 	
 	private static final byte[] CF_DATA = Bytes.toBytes("data");
-	private static final byte[] Q_CATEGORY = Bytes.toBytes("category");
-	private static final byte[] Q_ROOT_CAUSE = Bytes.toBytes("rootCause");
-	
 	private static final byte[] CF_ASSOCIATION = Bytes.toBytes("association");
-	private static final byte[] Q_ASSOCIATIOIN_ID = Bytes.toBytes("artifactId");
+	
+	private static final byte[] qCategory = Bytes.toBytes("category");
+	private static final byte[] qRootCause = Bytes.toBytes("rootCause");
+	private static final byte[] qAssociationId = Bytes.toBytes("artifactId");
 
 	private Parser parser;
 
@@ -43,12 +43,12 @@ public class DataImporterMapper<K> extends Mapper<LongWritable, Text, K, Put> {
 			byte[] rootCause = Bytes.toBytes(artf.getRootCause());
 
 			Put p = new Put(rowKey);
-			p.addColumn(CF_DATA, Q_CATEGORY, category);
-			p.addColumn(CF_DATA, Q_ROOT_CAUSE, rootCause);
+			p.addColumn(CF_DATA, qCategory, category);
+			p.addColumn(CF_DATA, qRootCause, rootCause);
 			
 			for (Association assoc: artf.getAssociations()) {
 				byte[] associationId = Bytes.toBytes(assoc.getArtfId());
-				p.addColumn(CF_ASSOCIATION, Q_ASSOCIATIOIN_ID, associationId);
+				p.addColumn(CF_ASSOCIATION, qAssociationId, associationId);
 			}
 			
 			context.write(null, p);

@@ -89,5 +89,16 @@ public class TeamForgeParserTest {
 		assertEquals(expectedDescription, comment.getDescription());
 		assertEquals(expectedCreatedByFullName, comment.getCreatedByFullName());
 	}
+	
+	@Test
+	public void testParse_commits() throws Exception {
+
+		List<String> commitFiles = artf.getCommitFiles();
+		assertEquals(3, commitFiles.size());
+
+		assertEquals("AWD/trunk/src/web/awd/common/widgets/awd.search/awd.search.js", commitFiles.get(0));
+		assertEquals("AWD/trunk/src/web/awd/common/widgets/awd.search/awd.searchForm.js", commitFiles.get(1));
+		assertEquals("AWD/trunk/src/web/awd/qUnitTests/widgets/js/searchUnitTest.js", commitFiles.get(2));
+	}
 
 }
