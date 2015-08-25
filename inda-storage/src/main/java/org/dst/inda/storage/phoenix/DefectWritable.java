@@ -1,22 +1,19 @@
 package org.dst.inda.storage.phoenix;
 
-import java.io.DataInput;
-import java.io.DataOutput;
-import java.io.IOException;
+import java.sql.Array;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapreduce.lib.db.DBWritable;
 
-public class DefectWritable implements DBWritable, Writable {
+public class DefectWritable implements DBWritable {
 	
 	private String planningFolderId;
 	private String artifactId;
 	private String rootCause;
 	private String category;
-	private String[] associations;
+	private String[] commitFiles;
 
 	public String getPlanningFolderId() {
 		return planningFolderId;
@@ -50,40 +47,35 @@ public class DefectWritable implements DBWritable, Writable {
 		this.category = category;
 	}
 
+	public String[] getCommitFiles() {
+		return commitFiles;
+	}
+
+	public void setCommitFiles(String[] commitFiles) {
+		this.commitFiles = commitFiles;
+	}
+
 	@Override
 	public void write(PreparedStatement pstmt) throws SQLException {
+		
+		Array commitFilesArr = pstmt.getConnection().createArrayOf("VARCHAR", commitFiles);
+		
 		pstmt.setString(1, planningFolderId);
 		pstmt.setString(2, artifactId);
 		pstmt.setString(3, category);
 		pstmt.setString(4, rootCause);
+		pstmt.setArray(5, commitFilesArr);
 		
 	}
 
 	@Override
 	public void readFields(ResultSet rs) throws SQLException {
-		planningFolderId = rs.getString("PLANNING_FOLDER_ID");
-		artifactId = rs.getString("ARTIFACT_ID");
-		category = rs.getString("CATEGORY");
-		rootCause = rs.getString("ROOT_CAUSE");
-//		Array associationArray = rs.getArray("associations");
-		
-	}
-
-	@Override
-	public String toString() {
-		return "DefectWritable [planningFolderId=" + planningFolderId + ", artifactId=" + artifactId + ", rootCause="
-				+ rootCause + ", category=" + category + "]";
-	}
-
-	@Override
-	public void write(DataOutput out) throws IOException {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void readFields(DataInput in) throws IOException {
-		// TODO Auto-generated method stub
+		planningFolderId = rs.getString("planning_folder_id");
+		artifactId = rs.getString("artifact_id");
+		category = rs.getString("category");
+		rootCause = rs.getString("root_cause");
+		Array commitFilesArr = rs.getArray("commit_files");
+		commitFiles = (String[])commitFilesArr.getArray();
 		
 	}
 }

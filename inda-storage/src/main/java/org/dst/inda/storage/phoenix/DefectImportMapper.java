@@ -1,6 +1,7 @@
 package org.dst.inda.storage.phoenix;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -35,11 +36,13 @@ public class DefectImportMapper<K> extends Mapper<LongWritable, Text, K, DefectW
 			if (StringUtils.isBlank(artf.getPlanningFolderId())) {
 				context.getCounter(IllFormedDefect.NO_PLANNING_FOLDER).increment(1L);
 			} else {
+				List<String> commitFiles = artf.getCommitFiles();
 				DefectWritable defect = new DefectWritable();
 				defect.setPlanningFolderId(artf.getPlanningFolderId());
 				defect.setArtifactId(artf.getId());
 				defect.setRootCause(artf.getRootCause());
 				defect.setCategory(artf.getCategory());
+				defect.setCommitFiles(commitFiles.toArray(new String[commitFiles.size()]));
 				context.write(null, defect);
 			}
 		} catch (ParserConfigurationException | SAXException e) {

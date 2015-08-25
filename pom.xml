@@ -15,7 +15,8 @@
 		<module>inda-batch</module>
 		<module>inda-storage</module>
 		<module>inda-core</module>
-		<module>inda-application</module>
+		<module>inda-service</module>
+		<module>inda-webapp</module>
 	</modules>
 
 	<properties>
@@ -48,6 +49,14 @@
 				<version>${junit.version}</version>
 				<scope>test</scope>
 			</dependency>
+
+			<!-- <dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency> -->
+
 		</dependencies>
 	</dependencyManagement>
 

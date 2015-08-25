@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dst-inda.iml" filepath="$PROJECT_DIR$/dst-inda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inda-batch/inda-batch.iml" filepath="$PROJECT_DIR$/inda-batch/inda-batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inda-core/inda-core.iml" filepath="$PROJECT_DIR$/inda-core/inda-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inda-service/inda-service.iml" filepath="$PROJECT_DIR$/inda-service/inda-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inda-storage/inda-storage.iml" filepath="$PROJECT_DIR$/inda-storage/inda-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inda-webapp/inda-webapp.iml" filepath="$PROJECT_DIR$/inda-webapp/inda-webapp.iml" />
+    </modules>
+  </component>
+</project>

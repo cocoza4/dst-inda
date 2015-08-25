@@ -17,7 +17,7 @@ public class DefectImporter extends Configured implements Tool {
 	private static final String DOCUMENT_START_TAG = "<artifact>";
 	private static final String DOCUMENT_END_TAG = "</artifact>";
 	
-	private static final String TABLE_DEFECT = "DEFECT";
+	private static final String TABLE_DEFECT = "DEFECT_NEW";
 	
 	@Override
 	public int run(String[] args) throws Exception {
@@ -38,7 +38,7 @@ public class DefectImporter extends Configured implements Tool {
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		job.setMapperClass(DefectImportMapper.class);
 		job.setNumReduceTasks(0);
-		PhoenixMapReduceUtil.setOutput(job, TABLE_DEFECT, "PLANNING_FOLDER_ID,ARTIFACT_ID,CATEGORY,ROOT_CAUSE");
+		PhoenixMapReduceUtil.setOutput(job, TABLE_DEFECT, "PLANNING_FOLDER_ID,ARTIFACT_ID,CATEGORY,ROOT_CAUSE, COMMIT_FILES");
 		return job.waitForCompletion(true) ? 0 : 1;
 	}
 	
