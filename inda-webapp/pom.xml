@@ -15,28 +15,16 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<phoenix.version>4.4.0-HBase-1.1</phoenix.version>
-		<spring.version>4.2.0.RELEASE</spring.version>
+		<spring.version>4.1.6.RELEASE</spring.version>
 		<jackson.version>2.5.2</jackson.version>
 	</properties>
 	<dependencies>
-
-		<dependency>
-			<groupId>org.apache.phoenix</groupId>
-			<artifactId>phoenix-core</artifactId>
-			<version>${phoenix.version}</version>
-		</dependency>
-
-		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>servlet-api</artifactId> 
-			</dependency> -->
 
 		<dependency>
 			<artifactId>inda-service</artifactId>
 			<groupId>org.dst.inda</groupId>
 			<version>${project.version}</version>
 		</dependency>
-
-		<!-- <dependency> <groupId>commons-dbcp</groupId> <artifactId>commons-dbcp</artifactId> 
-			<version>1.4</version> </dependency> -->
 
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
@@ -79,12 +67,12 @@
 			<version>${jackson.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
-		</dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.servlet</groupId>-->
+            <!--<artifactId>javax.servlet-api</artifactId>-->
+            <!--<version>3.1.0</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
 
 		<dependency>
 			<groupId>junit</groupId>

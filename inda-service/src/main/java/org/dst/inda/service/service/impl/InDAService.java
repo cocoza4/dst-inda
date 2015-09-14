@@ -18,11 +18,14 @@ import java.util.Set;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.dst.inda.service.model.Artifact;
+import org.dst.inda.service.model.CategoryImpact;
 import org.dst.inda.service.model.Graph;
+import org.dst.inda.service.model.Impact;
 import org.dst.inda.service.model.Link;
 import org.dst.inda.service.model.Node;
 import org.dst.inda.service.service.IInDAService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
@@ -33,14 +36,21 @@ public class InDAService implements IInDAService {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
-	private static final String SQL_SELECT_DEFECTS_BY_PLANNING_FOLDER_ID = "SELECT * FROM defect_new WHERE planning_folder_id = ?";
-	private static final String SQL_SELECT_DEFECTS_BY_FILE = "SELECT planning_folder_id, defect_new.artifact_id AS artifact_id, category, root_cause, commit_files "
+	private static final String SQL_SELECT_DEFECTS = "SELECT * FROM defect_new";
+	private static final String SQL_SELECT_DEFECTS_BY_FILE = "SELECT planning_folder_id, defect_new.artifact_id AS artifact_id, "
+			+ "category, root_cause, commit_files "
 			+ "FROM defect_new INNER JOIN file_defect ON defect_new.artifact_id = file_defect.artifact_id";
+    private static final String SQL_SELECT_IMPACTS_BY_ARTF_ID = "SELECT category, file "
+            + "FROM defect_new INNER JOIN file_defect ON defect_new.artifact_id = file_defect.artifact_id "
+            + "WHERE defect_new.artifact_id = ?";
+
+    private static final int DEFAULT_NODE_SIZE = 5;
 
 	@Override
 	public Graph generateGraphByPlanningFolderIds(List<String> planningFolderIds) {
 		Graph graph = new Graph();
-		List<Artifact> artifacts = jdbcTemplate.query(SQL_SELECT_DEFECTS_BY_PLANNING_FOLDER_ID, ARTIFACT_ROW_MAPPER,
+        String sql = SQL_SELECT_DEFECTS + this.buildPlanningFolderWhereClause(planningFolderIds);
+		List<Artifact> artifacts = jdbcTemplate.query(sql, ARTIFACT_ROW_MAPPER,
 				planningFolderIds.toArray());
 
 		Map<String, Integer> countMap = new HashMap<>();
@@ -61,12 +71,12 @@ public class InDAService implements IInDAService {
 						Integer count = countMap.get(key);
 						if (count == null) {
 							count = 1;
-							countMap.put(key, count);
 							relevantArtifactMap.put(artifactId, artifact);
 							relevantArtifactMap.put(associatedArtifact.getId(), associatedArtifact);
 						} else {
 							count++;
 						}
+						countMap.put(key, count);
 					}
 				}
 			}
@@ -80,10 +90,11 @@ public class InDAService implements IInDAService {
 			String artfId = artfIds[0];
 			String associatedArtfId = artfIds[1];
 
-			Node node = this.toNode(relevantArtifactMap.get(artfId));
+            int nodeSize = DEFAULT_NODE_SIZE + countMap.get(key) * 2;
+			Node node = this.toNode(relevantArtifactMap.get(artfId), nodeSize);
 			nodeSet.add(node);
 
-			Node associatedNode = this.toNode(relevantArtifactMap.get(associatedArtfId));
+			Node associatedNode = this.toNode(relevantArtifactMap.get(associatedArtfId), DEFAULT_NODE_SIZE);
 			nodeSet.add(associatedNode);
 		}
 		Map<String, Integer> indexMap = this.buildIndexMap(nodeSet);
@@ -105,12 +116,60 @@ public class InDAService implements IInDAService {
 		return graph;
 	}
 
-	private Node toNode(Artifact artf) {
+    @Override
+    public Impact generateImpactsByKey(String planningFolderId, String artifactId) {
+        String sql = SQL_SELECT_DEFECTS + " WHERE planning_folder_id = ? AND artifact_id = ?";
+		Impact impact = new Impact();
+		try {
+			Artifact artifact = jdbcTemplate.queryForObject(sql, ARTIFACT_ROW_MAPPER, planningFolderId, artifactId);
+
+			impact.setArtifactId(artifact.getId());
+			impact.setArtifactTitle("mock");
+			impact.setCommitFiles(artifact.getCommitFiles());
+
+			Map<String, Integer> categoryCountMap = new HashMap<>();
+			List<String> commitFiles = artifact.getCommitFiles();
+			if (CollectionUtils.isNotEmpty(commitFiles)) {
+				List<Artifact> associatedArtifacts = this.selectArtifactsByFiles(commitFiles);
+				int total = this.calculateCategoryPercentage(categoryCountMap, associatedArtifacts);
+
+				List<CategoryImpact> categoryImpacts = new ArrayList<>();
+				for (Entry<String, Integer> entry : categoryCountMap.entrySet()) {
+					float percentage = (float) entry.getValue() / total * 100;
+					categoryImpacts.add(new CategoryImpact(entry.getKey(), percentage));
+				}
+				impact.setCategoryImpacts(categoryImpacts);
+			}
+		} catch (EmptyResultDataAccessException e) {
+
+		}
+
+        return impact;
+    }
+
+    private int calculateCategoryPercentage(Map<String, Integer> categoryCountMap, List<Artifact> artifacts) {
+        int total = 0;
+        for (Artifact artifact: artifacts) {
+            String category = artifact.getCategory();
+            Integer count = categoryCountMap.get(category);
+            if (count == null) {
+                count = 1;
+            } else {
+                count++;
+            }
+            categoryCountMap.put(category, count);
+            total++;
+        }
+        return total;
+    }
+
+    private Node toNode(Artifact artf, int size) {
 		Node node = new Node();
 		node.setArtifactId(artf.getId());
 		node.setCategory(artf.getCategory());
 		node.setPlanningFolderId(artf.getPlanningFolderId());
 		node.setRootCause(artf.getRootCause());
+        node.setSize(size);
 
 		if (StringUtils.isBlank(node.getCategory())) {
 			node.setCategory("undefined");
@@ -152,6 +211,19 @@ public class InDAService implements IInDAService {
 		}
 		return sb.toString();
 	}
+
+    private String buildPlanningFolderWhereClause(List<String> files) {
+        StringBuilder sb = new StringBuilder(" WHERE ");
+        for (int i = 0; i < files.size(); i++) {
+
+            if (i + 1 == files.size()) {
+                sb.append("planning_folder_id = ?");
+            } else {
+                sb.append("planning_folder_id = ? OR ");
+            }
+        }
+        return sb.toString();
+    }
 
 	private List<Artifact> selectArtifactsByFiles(List<String> files) {
 		String sql = SQL_SELECT_DEFECTS_BY_FILE + this.buildWhereClause(files);

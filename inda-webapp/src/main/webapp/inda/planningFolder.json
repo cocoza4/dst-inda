@@ -1,0 +1,2268 @@
+{
+  "nodes": [
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60120",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf50210",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf46428",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf27623",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60297",
+      "rootCause": "undefined",
+      "size": 13,
+      "artifactTitle": "Search on communications doens't return the correct result on date",
+      "commitFiles": [
+        "AWD/trunk/src/java/awd-core/src/com/dstawd/utility/AWDKeyStoreSecurity.java",
+        "AWD/trunk/src/java/awd/src/com/dstawd/security/resource/bo/impl/AWDKeyStoreEncryption.java",
+        "AWD/trunk/src/java/awd_junit/src/com/dstawd/conversionrotation/BasePasswordEncryptionIntegrationTest.java",
+        "AWD/trunk/src/java/PasswordEncryption/src/com/dstawd/conversionrotation/PasswordEncryption.java",
+        "AWD/trunk/src/java/awd_junit/src/com/dstawd/security/resource/bo/impl/AWDKeyStoreEncryptionIntegrationTest.java",
+        "AWD/trunk/src/java/PasswordEncryption/test/com/dstawd/conversionrotation/PasswordEncryptionTest.java",
+        "AWD/trunk/src/java/awd-core/src/com/dstawd/ejb/dao/impl/AWDConfigurationDAOImpl.java",
+        "AWD/trunk/src/java/awd/test/com/dstawd/security/resource/bo/impl/AWDKeyStoreEncryptionTest.java",
+        "AWD/trunk/src/java/awd-core/test/com/dstawd/ejb/dao/impl/AWDConfigurationDAOImplTest.java",
+        "AWD/trunk/src/java/awd_junit/src/com/dstawd/security/resource/bo/impl/AWDKeyStoreEncryptionHelper.java",
+        "AWD/trunk/src/java/awd_junit/src/com/dstawd/ejb/dao/impl/AWDConfigurationDAOImplTest.java"
+      ],
+      "categoryImpacts": [
+        {
+          "category": "server",
+          "percentage": 96.296295
+        },
+        {
+          "category": "automation",
+          "percentage": 3.7037036
+        }
+      ]
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1689",
+      "artifactId": "artf56736",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61360",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61792",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60108",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60486",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf38959",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60046",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1669",
+      "artifactId": "artf50402",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf50095",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61733",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61740",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf48810",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf48811",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48317",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf20687",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf52059",
+      "rootCause": "undefined",
+      "size": 9
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1689",
+      "artifactId": "artf54436",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61647",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf36399",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48439",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "monitoring",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61612",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "app performance tuning",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf59831",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf43403",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48438",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48436",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf42727",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf9761",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61672",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1749",
+      "artifactId": "artf55251",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf36213",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60145",
+      "rootCause": "undefined",
+      "size": 9
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf13558",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf38779",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf43942",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48396",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61403",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61371",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1750",
+      "artifactId": "artf58829",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "automation",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf46189",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "automation",
+      "planningFolderId": "plan1787",
+      "artifactId": "artf62497",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1750",
+      "artifactId": "artf52052",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf47693",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "automation",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61609",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61398",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61627",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf62196",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "automation",
+      "planningFolderId": "plan1749",
+      "artifactId": "artf55703",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48597",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf28056",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48522",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf50374",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1689",
+      "artifactId": "artf54299",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1105",
+      "artifactId": "artf19242",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1026",
+      "artifactId": "artf1185",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61752",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf18270",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61664",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61133",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf27653",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48534",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf17498",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf40399",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf49678",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39264",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "automation",
+      "planningFolderId": "plan1749",
+      "artifactId": "artf51266",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf42148",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf37402",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1669",
+      "artifactId": "artf53656",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf18892",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf48475",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf57282",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf37332",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1749",
+      "artifactId": "artf51276",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48568",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf38226",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48441",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48467",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1669",
+      "artifactId": "artf53200",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1669",
+      "artifactId": "artf48799",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48605",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf43137",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf50005",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf18757",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61338",
+      "rootCause": "undefined",
+      "size": 9
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61608",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60628",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1669",
+      "artifactId": "artf53879",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60498",
+      "rootCause": "undefined",
+      "size": 9
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61393",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48797",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf62228",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61665",
+      "rootCause": "undefined",
+      "size": 11
+    },
+    {
+      "category": "deploy & perf.",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf62172",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1750",
+      "artifactId": "artf51053",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1749",
+      "artifactId": "artf51275",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1437",
+      "artifactId": "artf36882",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf26378",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf46483",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61876",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1105",
+      "artifactId": "artf1537",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf46291",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf49370",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60081",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48778",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61350",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39052",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1105",
+      "artifactId": "artf17362",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61402",
+      "rootCause": "undefined",
+      "size": 9
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61602",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf37406",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf21248",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1716",
+      "artifactId": "artf58033",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf58091",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf47148",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61379",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48431",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf25267",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61812",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf20942",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1689",
+      "artifactId": "artf52439",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf25862",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "automation",
+      "planningFolderId": "plan1749",
+      "artifactId": "artf55289",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39677",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf40373",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48517",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf59695",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf60631",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf46331",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf44377",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf37776",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48450",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf17854",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf19358",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf47722",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39131",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf37774",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf38709",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf48696",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf48582",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf25519",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf26986",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39011",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf37867",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39047",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf49436",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39420",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf47634",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "case management",
+      "planningFolderId": "plan1410",
+      "artifactId": "artf39549",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf46422",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf61356",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1019",
+      "artifactId": "artf17429",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "design",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf27299",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48435",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48444",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf49434",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf47627",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1650",
+      "artifactId": "artf48585",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf49369",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1669",
+      "artifactId": "artf52264",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "communications",
+      "planningFolderId": "plan1557",
+      "artifactId": "artf59131",
+      "rootCause": "undefined",
+      "size": 7
+    },
+    {
+      "category": "portal",
+      "planningFolderId": "plan1020",
+      "artifactId": "artf26648",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "server",
+      "planningFolderId": "plan1717",
+      "artifactId": "artf56739",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1716",
+      "artifactId": "artf57891",
+      "rootCause": "undefined",
+      "size": 5
+    },
+    {
+      "category": "new portal",
+      "planningFolderId": "plan1613",
+      "artifactId": "artf49410",
+      "rootCause": "undefined",
+      "size": 5
+    }
+  ],
+  "links": [
+    {
+      "source": 0,
+      "value": 1,
+      "target": 1
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 3
+    },
+    {
+      "source": 4,
+      "value": 4,
+      "target": 5
+    },
+    {
+      "source": 6,
+      "value": 1,
+      "target": 7
+    },
+    {
+      "source": 8,
+      "value": 1,
+      "target": 4
+    },
+    {
+      "source": 9,
+      "value": 1,
+      "target": 10
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 12
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 13
+    },
+    {
+      "source": 14,
+      "value": 1,
+      "target": 15
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 16
+    },
+    {
+      "source": 15,
+      "value": 1,
+      "target": 14
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 17
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 18
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 19
+    },
+    {
+      "source": 20,
+      "value": 2,
+      "target": 21
+    },
+    {
+      "source": 22,
+      "value": 1,
+      "target": 23
+    },
+    {
+      "source": 20,
+      "value": 1,
+      "target": 24
+    },
+    {
+      "source": 25,
+      "value": 1,
+      "target": 6
+    },
+    {
+      "source": 26,
+      "value": 1,
+      "target": 27
+    },
+    {
+      "source": 20,
+      "value": 2,
+      "target": 28
+    },
+    {
+      "source": 20,
+      "value": 1,
+      "target": 29
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 31
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 33
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 34
+    },
+    {
+      "source": 35,
+      "value": 2,
+      "target": 36
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 37
+    },
+    {
+      "source": 0,
+      "value": 2,
+      "target": 20
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 39
+    },
+    {
+      "source": 40,
+      "value": 1,
+      "target": 41
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 42
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 43
+    },
+    {
+      "source": 8,
+      "value": 1,
+      "target": 44
+    },
+    {
+      "source": 0,
+      "value": 2,
+      "target": 45
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 46
+    },
+    {
+      "source": 47,
+      "value": 1,
+      "target": 48
+    },
+    {
+      "source": 49,
+      "value": 1,
+      "target": 50
+    },
+    {
+      "source": 32,
+      "value": 2,
+      "target": 51
+    },
+    {
+      "source": 4,
+      "value": 1,
+      "target": 36
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 52
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 53
+    },
+    {
+      "source": 20,
+      "value": 1,
+      "target": 54
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 55
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 56
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 57
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 58
+    },
+    {
+      "source": 15,
+      "value": 1,
+      "target": 59
+    },
+    {
+      "source": 4,
+      "value": 1,
+      "target": 8
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 60
+    },
+    {
+      "source": 61,
+      "value": 1,
+      "target": 62
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 63
+    },
+    {
+      "source": 20,
+      "value": 1,
+      "target": 64
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 43
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 65
+    },
+    {
+      "source": 9,
+      "value": 1,
+      "target": 66
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 67
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 68
+    },
+    {
+      "source": 2,
+      "value": 2,
+      "target": 69
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 70
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 71
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 72
+    },
+    {
+      "source": 7,
+      "value": 1,
+      "target": 6
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 73
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 74
+    },
+    {
+      "source": 75,
+      "value": 1,
+      "target": 76
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 57
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 77
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 78
+    },
+    {
+      "source": 22,
+      "value": 1,
+      "target": 79
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 80
+    },
+    {
+      "source": 62,
+      "value": 1,
+      "target": 47
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 81
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 82
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 83
+    },
+    {
+      "source": 20,
+      "value": 2,
+      "target": 84
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 85
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 86
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 87
+    },
+    {
+      "source": 88,
+      "value": 2,
+      "target": 62
+    },
+    {
+      "source": 89,
+      "value": 1,
+      "target": 90
+    },
+    {
+      "source": 0,
+      "value": 2,
+      "target": 91
+    },
+    {
+      "source": 92,
+      "value": 2,
+      "target": 93
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 94
+    },
+    {
+      "source": 93,
+      "value": 2,
+      "target": 95
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 29
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 83
+    },
+    {
+      "source": 96,
+      "value": 3,
+      "target": 97
+    },
+    {
+      "source": 59,
+      "value": 1,
+      "target": 6
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 98
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 99
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 77
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 100
+    },
+    {
+      "source": 0,
+      "value": 2,
+      "target": 84
+    },
+    {
+      "source": 20,
+      "value": 2,
+      "target": 91
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 98
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 101
+    },
+    {
+      "source": 93,
+      "value": 2,
+      "target": 92
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 102
+    },
+    {
+      "source": 61,
+      "value": 1,
+      "target": 103
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 56
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 104
+    },
+    {
+      "source": 92,
+      "value": 2,
+      "target": 95
+    },
+    {
+      "source": 9,
+      "value": 1,
+      "target": 105
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 106
+    },
+    {
+      "source": 15,
+      "value": 1,
+      "target": 88
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 64
+    },
+    {
+      "source": 97,
+      "value": 3,
+      "target": 96
+    },
+    {
+      "source": 107,
+      "value": 1,
+      "target": 36
+    },
+    {
+      "source": 62,
+      "value": 2,
+      "target": 88
+    },
+    {
+      "source": 48,
+      "value": 1,
+      "target": 47
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 108
+    },
+    {
+      "source": 93,
+      "value": 1,
+      "target": 109
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 110
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 111
+    },
+    {
+      "source": 14,
+      "value": 1,
+      "target": 88
+    },
+    {
+      "source": 112,
+      "value": 2,
+      "target": 113
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 114
+    },
+    {
+      "source": 4,
+      "value": 1,
+      "target": 115
+    },
+    {
+      "source": 9,
+      "value": 1,
+      "target": 116
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 12
+    },
+    {
+      "source": 117,
+      "value": 1,
+      "target": 118
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 98
+    },
+    {
+      "source": 50,
+      "value": 1,
+      "target": 119
+    },
+    {
+      "source": 88,
+      "value": 1,
+      "target": 15
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 120
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 121
+    },
+    {
+      "source": 6,
+      "value": 1,
+      "target": 25
+    },
+    {
+      "source": 90,
+      "value": 1,
+      "target": 122
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 123
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 124
+    },
+    {
+      "source": 35,
+      "value": 3,
+      "target": 125
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 126
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 127
+    },
+    {
+      "source": 75,
+      "value": 1,
+      "target": 128
+    },
+    {
+      "source": 88,
+      "value": 1,
+      "target": 14
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 129
+    },
+    {
+      "source": 103,
+      "value": 1,
+      "target": 88
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 36
+    },
+    {
+      "source": 130,
+      "value": 1,
+      "target": 131
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 132
+    },
+    {
+      "source": 41,
+      "value": 1,
+      "target": 40
+    },
+    {
+      "source": 95,
+      "value": 2,
+      "target": 93
+    },
+    {
+      "source": 20,
+      "value": 2,
+      "target": 0
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 54
+    },
+    {
+      "source": 4,
+      "value": 1,
+      "target": 44
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 133
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 134
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 135
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 136
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 137
+    },
+    {
+      "source": 6,
+      "value": 1,
+      "target": 59
+    },
+    {
+      "source": 0,
+      "value": 2,
+      "target": 13
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 138
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 139
+    },
+    {
+      "source": 47,
+      "value": 1,
+      "target": 62
+    },
+    {
+      "source": 117,
+      "value": 1,
+      "target": 140
+    },
+    {
+      "source": 4,
+      "value": 1,
+      "target": 136
+    },
+    {
+      "source": 35,
+      "value": 2,
+      "target": 141
+    },
+    {
+      "source": 50,
+      "value": 1,
+      "target": 49
+    },
+    {
+      "source": 0,
+      "value": 3,
+      "target": 142
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 143
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 144
+    },
+    {
+      "source": 20,
+      "value": 2,
+      "target": 45
+    },
+    {
+      "source": 88,
+      "value": 1,
+      "target": 103
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 145
+    },
+    {
+      "source": 59,
+      "value": 1,
+      "target": 15
+    },
+    {
+      "source": 11,
+      "value": 1,
+      "target": 144
+    },
+    {
+      "source": 30,
+      "value": 1,
+      "target": 146
+    },
+    {
+      "source": 90,
+      "value": 1,
+      "target": 89
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 36
+    },
+    {
+      "source": 2,
+      "value": 1,
+      "target": 147
+    },
+    {
+      "source": 117,
+      "value": 1,
+      "target": 148
+    },
+    {
+      "source": 62,
+      "value": 1,
+      "target": 61
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 149
+    },
+    {
+      "source": 113,
+      "value": 2,
+      "target": 112
+    },
+    {
+      "source": 20,
+      "value": 1,
+      "target": 52
+    },
+    {
+      "source": 122,
+      "value": 1,
+      "target": 90
+    },
+    {
+      "source": 0,
+      "value": 3,
+      "target": 21
+    },
+    {
+      "source": 9,
+      "value": 1,
+      "target": 150
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 151
+    },
+    {
+      "source": 88,
+      "value": 3,
+      "target": 61
+    },
+    {
+      "source": 61,
+      "value": 3,
+      "target": 88
+    },
+    {
+      "source": 9,
+      "value": 1,
+      "target": 152
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 153
+    },
+    {
+      "source": 103,
+      "value": 1,
+      "target": 61
+    },
+    {
+      "source": 47,
+      "value": 2,
+      "target": 154
+    },
+    {
+      "source": 109,
+      "value": 1,
+      "target": 93
+    },
+    {
+      "source": 131,
+      "value": 1,
+      "target": 130
+    },
+    {
+      "source": 119,
+      "value": 1,
+      "target": 50
+    },
+    {
+      "source": 26,
+      "value": 1,
+      "target": 155
+    },
+    {
+      "source": 0,
+      "value": 2,
+      "target": 28
+    },
+    {
+      "source": 0,
+      "value": 2,
+      "target": 24
+    },
+    {
+      "source": 154,
+      "value": 2,
+      "target": 47
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 29
+    },
+    {
+      "source": 22,
+      "value": 1,
+      "target": 156
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 157
+    },
+    {
+      "source": 20,
+      "value": 1,
+      "target": 158
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 159
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 160
+    },
+    {
+      "source": 38,
+      "value": 1,
+      "target": 161
+    },
+    {
+      "source": 20,
+      "value": 1,
+      "target": 13
+    },
+    {
+      "source": 95,
+      "value": 2,
+      "target": 92
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 162
+    },
+    {
+      "source": 117,
+      "value": 1,
+      "target": 163
+    },
+    {
+      "source": 164,
+      "value": 1,
+      "target": 5
+    },
+    {
+      "source": 35,
+      "value": 1,
+      "target": 165
+    },
+    {
+      "source": 164,
+      "value": 1,
+      "target": 166
+    },
+    {
+      "source": 32,
+      "value": 1,
+      "target": 167
+    },
+    {
+      "source": 4,
+      "value": 7,
+      "target": 166
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 158
+    },
+    {
+      "source": 0,
+      "value": 1,
+      "target": 168
+    },
+    {
+      "source": 20,
+      "value": 2,
+      "target": 142
+    }
+  ]
+}

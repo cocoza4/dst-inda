@@ -1,5 +1,6 @@
 package org.dst.inda.service.service.impl;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,8 @@ public class InDAServiceTest {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.writeValue(new File(file), graph);
 	}
-	
+
+//	@Ignore
 	@Test
     public void testInsert() throws Exception {
 		long start = System.currentTimeMillis();

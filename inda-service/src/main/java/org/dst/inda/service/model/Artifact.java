@@ -41,7 +41,7 @@ public class Artifact {
 	public void setRootCause(String rootCause) {
 		this.rootCause = rootCause;
 	}
-	
+
 	public List<String> getCommitFiles() {
 		return commitFiles;
 	}
@@ -51,30 +51,22 @@ public class Artifact {
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((category == null) ? 0 : category.hashCode());
-		result = prime * result + ((commitFiles == null) ? 0 : commitFiles.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((planningFolderId == null) ? 0 : planningFolderId.hashCode());
-		result = prime * result + ((rootCause == null) ? 0 : rootCause.hashCode());
-		return result;
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+
+		Artifact artifact = (Artifact) o;
+
+		if (!id.equals(artifact.id)) return false;
+		return planningFolderId.equals(artifact.planningFolderId);
+
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Artifact other = (Artifact) obj;
-		if (this.id.equals(other.getId())) {
-			return true;
-		}
-		return false;
+	public int hashCode() {
+		int result = id.hashCode();
+		result = 31 * result + planningFolderId.hashCode();
+		return result;
 	}
 	
 }

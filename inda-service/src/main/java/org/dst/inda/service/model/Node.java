@@ -5,6 +5,7 @@ public class Node {
 	private String planningFolderId;
 	private String artifactId;
 	private String category;
+	private Integer size;
 	private String rootCause;
 	
 	public String getPlanningFolderId() {
@@ -37,6 +38,14 @@ public class Node {
 	
 	public void setRootCause(String rootCause) {
 		this.rootCause = rootCause;
+	}
+
+	public Integer getSize() {
+		return size;
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
 	}
 
 	@Override
