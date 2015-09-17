@@ -4,8 +4,9 @@ public class Node {
 	
 	private String planningFolderId;
 	private String artifactId;
+	private String artifactTitle;
 	private String category;
-	private Integer size;
+	private Float size;
 	private String rootCause;
 	
 	public String getPlanningFolderId() {
@@ -24,7 +25,15 @@ public class Node {
 		this.artifactId = artifactId;
 	}
 
-	public String getCategory() {
+    public String getArtifactTitle() {
+        return artifactTitle;
+    }
+
+    public void setArtifactTitle(String artifactTitle) {
+        this.artifactTitle = artifactTitle;
+    }
+
+    public String getCategory() {
 		return category;
 	}
 	
@@ -40,11 +49,11 @@ public class Node {
 		this.rootCause = rootCause;
 	}
 
-	public Integer getSize() {
+	public Float getSize() {
 		return size;
 	}
 
-	public void setSize(Integer size) {
+	public void setSize(Float size) {
 		this.size = size;
 	}
 
@@ -53,9 +62,7 @@ public class Node {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((artifactId == null) ? 0 : artifactId.hashCode());
-		result = prime * result + ((category == null) ? 0 : category.hashCode());
 		result = prime * result + ((planningFolderId == null) ? 0 : planningFolderId.hashCode());
-		result = prime * result + ((rootCause == null) ? 0 : rootCause.hashCode());
 		return result;
 	}
 

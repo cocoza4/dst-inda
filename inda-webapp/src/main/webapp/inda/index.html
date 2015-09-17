@@ -124,11 +124,14 @@
                 <div id="detail"></div>
             </div>
             <div id="nodeDetail"></div>
+        </div>
             <script type="text/javascript">
+
             $(document).ready(function() {
 
                 //init dialog
                 $("#nodeDetail").dialog({
+                    position: {of: $('#report')},
                     autoOpen: false,
                     width: 500,
                     buttons: {

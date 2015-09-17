@@ -38,7 +38,7 @@ public class DefectImporter extends Configured implements Tool {
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		job.setMapperClass(DefectImportMapper.class);
 		job.setNumReduceTasks(0);
-		PhoenixMapReduceUtil.setOutput(job, TABLE_DEFECT, "PLANNING_FOLDER_ID,ARTIFACT_ID,CATEGORY,ROOT_CAUSE, COMMIT_FILES");
+		PhoenixMapReduceUtil.setOutput(job, TABLE_DEFECT, "PLANNING_FOLDER_ID,ARTIFACT_ID,ARTIFACT_TITLE,CATEGORY,ROOT_CAUSE, COMMIT_FILES");
 		return job.waitForCompletion(true) ? 0 : 1;
 	}
 	

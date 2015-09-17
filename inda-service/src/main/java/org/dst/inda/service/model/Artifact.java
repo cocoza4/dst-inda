@@ -5,6 +5,7 @@ import java.util.List;
 public class Artifact {
 	
 	private String id;
+	private String title;
 	private String planningFolderId;
 	private String category;
 	private String rootCause;
@@ -16,6 +17,14 @@ public class Artifact {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getPlanningFolderId() {
@@ -68,5 +77,16 @@ public class Artifact {
 		result = 31 * result + planningFolderId.hashCode();
 		return result;
 	}
-	
+
+    @Override
+    public String toString() {
+        return "Artifact{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", planningFolderId='" + planningFolderId + '\'' +
+                ", category='" + category + '\'' +
+                ", rootCause='" + rootCause + '\'' +
+                ", commitFiles=" + commitFiles +
+                '}';
+    }
 }

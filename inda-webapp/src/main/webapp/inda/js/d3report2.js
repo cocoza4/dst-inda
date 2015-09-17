@@ -245,7 +245,7 @@ function runReport(pfID) {
       // $("#nodeDetail")[0].innerHTML(d.artifactId);
       var nodeDetail = $("#nodeDetail");
       nodeDetail.html(""); // clear content
-      // var uri = 'api/defects?planningfolder=' + d.planningFolderId + '&artifact=' + d.artifactId;
+
       $.get('api/defects', {
         planningfolder: d.planningFolderId,
         artifact: d.artifactId
@@ -253,7 +253,10 @@ function runReport(pfID) {
         nodeDetail.append("<h5>Committed Files: </h5>");
         // var ul = nodeDetail.append("<ul></ul>");
         _.each(data.commitFiles, function(e, index) {
-          nodeDetail.append("<p style='font-size: x-small;'>" + e + "</p");
+          var arr = e.split('/');
+          console.log(arr);
+          var fileName = arr[arr.length-1];
+          nodeDetail.append("<p style='font-size: x-small;'>" + fileName + "</p");
         });
         nodeDetail.append("<h5>Related Module: </h5>");
         _.each(data.categoryImpacts, function(e, index) {
@@ -261,7 +264,8 @@ function runReport(pfID) {
         });
         // nodeDetail.html("<div>"+_.toArray(d.commitFiles)+"</div>");
 
-        $("#nodeDetail").dialog("option", "title", "Artifact ID: " + data.artifactId || '');
+        var header = "Artifact ID: " + data.artifactId + ' - ' + data.artifactTitle || '';
+        $("#nodeDetail").dialog("option", "title", header);
         $("#nodeDetail").dialog('open');
       });
     }
@@ -475,6 +479,11 @@ function createCategoryLegend() {
           "text": "Defect Category",
           "fontSize": 24
         },
+        "subtitle": {
+          "text": "The graph shows related product categories per a committed file under defects and their associations raised in a release.",
+          "color": "#999999",
+          "fontSize": 12,
+        },
         "location": "top-left",
         "titleSubtitlePadding": 9
       },
@@ -485,7 +494,7 @@ function createCategoryLegend() {
       },
       "size": {
         "canvasHeight": 590,
-        "canvasWidth": 500,
+        "canvasWidth": 800,
         "pieInnerRadius": "58%",
         "pieOuterRadius": "87%"
       },

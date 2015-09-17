@@ -40,6 +40,7 @@ public class DefectImportMapper<K> extends Mapper<LongWritable, Text, K, DefectW
 				DefectWritable defect = new DefectWritable();
 				defect.setPlanningFolderId(artf.getPlanningFolderId());
 				defect.setArtifactId(artf.getId());
+				defect.setArtifactTitle(artf.getTitle());
 				defect.setRootCause(artf.getRootCause());
 				defect.setCategory(artf.getCategory());
 				defect.setCommitFiles(commitFiles.toArray(new String[commitFiles.size()]));

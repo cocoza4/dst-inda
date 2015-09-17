@@ -11,6 +11,7 @@ public class DefectWritable implements DBWritable {
 	
 	private String planningFolderId;
 	private String artifactId;
+	private String artifactTitle;
 	private String rootCause;
 	private String category;
 	private String[] commitFiles;
@@ -29,6 +30,14 @@ public class DefectWritable implements DBWritable {
 
 	public void setArtifactId(String artifactId) {
 		this.artifactId = artifactId;
+	}
+
+	public String getArtifactTitle() {
+		return artifactTitle;
+	}
+
+	public void setArtifactTitle(String artifactTitle) {
+		this.artifactTitle = artifactTitle;
 	}
 
 	public String getRootCause() {
@@ -59,12 +68,13 @@ public class DefectWritable implements DBWritable {
 	public void write(PreparedStatement pstmt) throws SQLException {
 		
 		Array commitFilesArr = pstmt.getConnection().createArrayOf("VARCHAR", commitFiles);
-		
-		pstmt.setString(1, planningFolderId);
-		pstmt.setString(2, artifactId);
-		pstmt.setString(3, category);
-		pstmt.setString(4, rootCause);
-		pstmt.setArray(5, commitFilesArr);
+		int idx = 1;
+		pstmt.setString(idx++, planningFolderId);
+		pstmt.setString(idx++, artifactId);
+		pstmt.setString(idx++, artifactTitle);
+		pstmt.setString(idx++, category);
+		pstmt.setString(idx++, rootCause);
+		pstmt.setArray(idx, commitFilesArr);
 		
 	}
 
@@ -72,6 +82,7 @@ public class DefectWritable implements DBWritable {
 	public void readFields(ResultSet rs) throws SQLException {
 		planningFolderId = rs.getString("planning_folder_id");
 		artifactId = rs.getString("artifact_id");
+		artifactTitle = rs.getString("artifact_title");
 		category = rs.getString("category");
 		rootCause = rs.getString("root_cause");
 		Array commitFilesArr = rs.getArray("commit_files");

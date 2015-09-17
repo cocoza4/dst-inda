@@ -38,13 +38,24 @@ public class InDAService implements IInDAService {
 
 	private static final String SQL_SELECT_DEFECTS = "SELECT * FROM defect_new";
 	private static final String SQL_SELECT_DEFECTS_BY_FILE = "SELECT planning_folder_id, defect_new.artifact_id AS artifact_id, "
-			+ "category, root_cause, commit_files "
+			+ "defect_new.artifact_title AS artifact_title, category, root_cause, commit_files "
 			+ "FROM defect_new INNER JOIN file_defect ON defect_new.artifact_id = file_defect.artifact_id";
     private static final String SQL_SELECT_IMPACTS_BY_ARTF_ID = "SELECT category, file "
             + "FROM defect_new INNER JOIN file_defect ON defect_new.artifact_id = file_defect.artifact_id "
             + "WHERE defect_new.artifact_id = ?";
 
     private static final int DEFAULT_NODE_SIZE = 5;
+
+    private void updateFrequency(Map<String, Integer> map, String key) {
+        Integer count = map.get(key);
+        if (count == null) {
+            count = 1;
+            map.put(key, count);
+        } else {
+            count++;
+        }
+        map.put(key, count);
+    }
 
 	@Override
 	public Graph generateGraphByPlanningFolderIds(List<String> planningFolderIds) {
@@ -53,7 +64,8 @@ public class InDAService implements IInDAService {
 		List<Artifact> artifacts = jdbcTemplate.query(sql, ARTIFACT_ROW_MAPPER,
 				planningFolderIds.toArray());
 
-		Map<String, Integer> countMap = new HashMap<>();
+		Map<String, Integer> associationCountMap = new HashMap<>();
+        Map<String, Integer> frequencyMap = new HashMap<>();
 		Map<String, Artifact> artifactMap = this.buildArtifactMap(artifacts);
 
 		Map<String, Artifact> relevantArtifactMap = new HashMap<>();
@@ -68,7 +80,7 @@ public class InDAService implements IInDAService {
 				for (Artifact associatedArtifact : associatedArtifacts) {
 					if (!artifactId.equals(associatedArtifact.getId())) {
 						String key = artifactId + "," + associatedArtifact.getId();
-						Integer count = countMap.get(key);
+						Integer count = associationCountMap.get(key);
 						if (count == null) {
 							count = 1;
 							relevantArtifactMap.put(artifactId, artifact);
@@ -76,7 +88,8 @@ public class InDAService implements IInDAService {
 						} else {
 							count++;
 						}
-						countMap.put(key, count);
+						associationCountMap.put(key, count);
+                        this.updateFrequency(frequencyMap, artifactId);
 					}
 				}
 			}
@@ -84,13 +97,14 @@ public class InDAService implements IInDAService {
 		}
 		LinkedHashSet<Node> nodeSet = new LinkedHashSet<>();
 
-		for (String key : countMap.keySet()) {
+		for (String key : associationCountMap.keySet()) {
 			String[] artfIds = key.split(",");
 
 			String artfId = artfIds[0];
 			String associatedArtfId = artfIds[1];
 
-            int nodeSize = DEFAULT_NODE_SIZE + countMap.get(key) * 2;
+//            int nodeSize = DEFAULT_NODE_SIZE + associationCountMap.get(key) * 2;
+            float nodeSize = DEFAULT_NODE_SIZE + frequencyMap.get(artfId) * 0.1f;
 			Node node = this.toNode(relevantArtifactMap.get(artfId), nodeSize);
 			nodeSet.add(node);
 
@@ -99,7 +113,7 @@ public class InDAService implements IInDAService {
 		}
 		Map<String, Integer> indexMap = this.buildIndexMap(nodeSet);
 
-		for (Entry<String, Integer> entry : countMap.entrySet()) {
+		for (Entry<String, Integer> entry : associationCountMap.entrySet()) {
 
 			String[] artfIds = entry.getKey().split(",");
 
@@ -124,14 +138,14 @@ public class InDAService implements IInDAService {
 			Artifact artifact = jdbcTemplate.queryForObject(sql, ARTIFACT_ROW_MAPPER, planningFolderId, artifactId);
 
 			impact.setArtifactId(artifact.getId());
-			impact.setArtifactTitle("mock");
+			impact.setArtifactTitle(artifact.getTitle());
 			impact.setCommitFiles(artifact.getCommitFiles());
 
 			Map<String, Integer> categoryCountMap = new HashMap<>();
 			List<String> commitFiles = artifact.getCommitFiles();
 			if (CollectionUtils.isNotEmpty(commitFiles)) {
 				List<Artifact> associatedArtifacts = this.selectArtifactsByFiles(commitFiles);
-				int total = this.calculateCategoryPercentage(categoryCountMap, associatedArtifacts);
+				int total = this.calculateCategoryPercentage(categoryCountMap, artifact.getId(), associatedArtifacts);
 
 				List<CategoryImpact> categoryImpacts = new ArrayList<>();
 				for (Entry<String, Integer> entry : categoryCountMap.entrySet()) {
@@ -147,23 +161,25 @@ public class InDAService implements IInDAService {
         return impact;
     }
 
-    private int calculateCategoryPercentage(Map<String, Integer> categoryCountMap, List<Artifact> artifacts) {
+    private int calculateCategoryPercentage(Map<String, Integer> categoryCountMap, String artfId, List<Artifact> associatedArtifacts) {
         int total = 0;
-        for (Artifact artifact: artifacts) {
-            String category = artifact.getCategory();
-            Integer count = categoryCountMap.get(category);
-            if (count == null) {
-                count = 1;
-            } else {
-                count++;
+        for (Artifact associated: associatedArtifacts) {
+            if (!artfId.equals(associated.getId())) {
+                String category = associated.getCategory();
+                Integer count = categoryCountMap.get(category);
+                if (count == null) {
+                    count = 1;
+                } else {
+                    count++;
+                }
+                categoryCountMap.put(category, count);
+                total++;
             }
-            categoryCountMap.put(category, count);
-            total++;
         }
         return total;
     }
 
-    private Node toNode(Artifact artf, int size) {
+    private Node toNode(Artifact artf, float size) {
 		Node node = new Node();
 		node.setArtifactId(artf.getId());
 		node.setCategory(artf.getCategory());
@@ -237,6 +253,7 @@ public class InDAService implements IInDAService {
 			Artifact artifact = new Artifact();
 			artifact.setCategory(rs.getString("category"));
 			artifact.setId(rs.getString("artifact_id"));
+			artifact.setTitle(rs.getString("artifact_title"));
 			artifact.setPlanningFolderId(rs.getString("planning_folder_id"));
 			Array commitFilesArr = rs.getArray("commit_files");
 			if (commitFilesArr != null) {
